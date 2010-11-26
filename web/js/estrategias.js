@@ -18,13 +18,17 @@ $(function(){ // Función que se ejecuta al cargarse todos los elementos de una 
       event     : "dblclick",
       select : true,
       submit : 'Guardar',
-      cancel : 'Cancelar'
+      cancel : 'Cancelar',
+      callback: function(data){
+          console.log(data);
+      }
   });
   $("tr:not(:first)").hover(function(){
     tr = $(this);
     tr.addClass("hover");
     $("#0d"+tr.attr("id").substring(2)).show().bind("click",function(){
         $.post("../saveEstrategias", {"id":$(this).attr("id")}, function(data){
+            console.log(data);
             tr.remove();
         });
     });

@@ -18,7 +18,7 @@ import MovimientosBD.*;
  *
  * @author David
  */
-@WebServlet(name="saveEstrategias", urlPatterns={"/saveEstrategias"})
+//@WebServlet(name="saveEstrategias", urlPatterns={"/saveEstrategias"})
 public class saveEstrategias extends HttpServlet {
    
     /** 

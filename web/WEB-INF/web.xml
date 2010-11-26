@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    
     <servlet>
         <servlet-name>AlumnoServ</servlet-name>
         <servlet-class>Controller.Estrategias.AlumnoServ</servlet-class>
     </servlet>
-     <servlet-mapping>
+    <servlet>
+        <servlet-name>saveEstrategias</servlet-name>
+        <servlet-class>Controller.Estrategias.saveEstrategias</servlet-class>
+    </servlet>
+    <servlet-mapping>
         <servlet-name>AlumnoServ</servlet-name>
         <url-pattern>/estrategias/alumnoserv.do</url-pattern>
     </servlet-mapping>
-
-
-      <servlet>
+    <servlet>
         <servlet-name>EstrategiaServ</servlet-name>
         <servlet-class>Controller.Estrategias.EstrategiaServ</servlet-class>
     </servlet>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>EstrategiaServ</servlet-name>
         <url-pattern>/estrategias/estrategiaserv.do</url-pattern>
     </servlet-mapping>
-<!--Inicio Servlets de evaluaciones-->
+    <!--Inicio Servlets de evaluaciones-->
     <servlet>
         <servlet-name>llenarMateriasAE</servlet-name>
         <servlet-class>Controller.AutoEvaluacion.llenarMaterias</servlet-class>
@@ -190,6 +191,10 @@
     <servlet-mapping>
         <servlet-name>llenarGruposEF</servlet-name>
         <url-pattern>/Evaluaciones/EvaluacionF/llenarGrupos.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>saveEstrategias</servlet-name>
+        <url-pattern>/saveEstrategias</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

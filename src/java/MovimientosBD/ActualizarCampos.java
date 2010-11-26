@@ -26,7 +26,7 @@ public class ActualizarCampos {
 
     public ActualizarCampos() {
         ConexionBD nuevaConexion = new ConexionBD();
-        nuevaConexion.conectarBD("root", "55785018");
+        nuevaConexion.conectarBD("root", "root");
         this.setCon(nuevaConexion.getCon());
     }
 
